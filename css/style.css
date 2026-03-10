@@ -1,0 +1,331 @@
+/* 1. الإعدادات العامة والمتغيرات */
+:root {
+    --primary-color: #2c3e50;
+    --accent-gold: #f39c12;
+    --accent-blue: #2980b9;
+    --accent-orange: #d35400;
+    --text-color: #2c3e50;
+    --light-bg: #f4f7f6;
+    --white: #ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+line-height:1.6;
+color:var(--text-color);
+background-color:var(--light-bg);
+display:flex;
+flex-direction:column;
+min-height:100vh;
+text-align:center;
+}
+
+/* 2. الهيدر والقائمة */
+
+header{
+background:var(--primary-color);
+padding:1.5rem 0;
+box-shadow:0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+}
+
+.logo{
+font-size:2rem;
+font-weight:bold;
+color:var(--accent-gold);
+text-transform:uppercase;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+.nav-links li a{
+color:var(--white);
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active{
+color:var(--accent-gold);
+}
+
+/* 3. الحاوية الرئيسية */
+
+.container{
+max-width:1100px;
+margin:40px auto;
+padding:0 20px;
+flex:1;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* 4. الخدمات (فوق بعض) */
+
+.services-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:25px;
+width:100%;
+max-width:500px;
+margin-top:30px;
+}
+
+.card{
+background:var(--white);
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+padding:20px;
+transition:0.3s;
+border:1px solid #eee;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:var(--accent-gold);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.card h3{
+color:var(--accent-gold);
+margin-bottom:10px;
+}
+
+.card p{
+color:#555;
+font-size:14px;
+line-height:1.6;
+}
+
+/* 5. صفحات أخرى */
+
+.grid-container,
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+width:100%;
+margin-top:30px;
+}
+
+.service-card,
+.package-card,
+.stat-item,
+.feature-card{
+background:var(--white);
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+border:1px solid #eee;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.service-card:hover,
+.package-card:hover,
+.stat-item:hover{
+transform:translateY(-10px);
+border-color:var(--accent-gold);
+}
+
+.stat-item h3{
+font-size:2.5rem;
+color:var(--accent-gold);
+margin-bottom:5px;
+}
+
+/* الصور */
+
+img{
+max-width:100%;
+height:auto;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.service-img{
+height:180px;
+object-fit:cover;
+width:100%;
+}
+
+/* 6. صفحة اتصل بنا */
+
+.contact-wrapper{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:30px;
+width:100%;
+}
+
+.contact-form{
+background:var(--white);
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+width:100%;
+max-width:600px;
+}
+
+.form-group{
+width:100%;
+margin-bottom:20px;
+text-align:right;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+background:#fdfdfd;
+}
+
+.contact-info{
+background:var(--primary-color);
+color:white;
+padding:30px;
+border-radius:15px;
+width:100%;
+max-width:600px;
+}
+
+/* 7. الأزرار */
+
+.btn{
+background:var(--accent-gold);
+color:var(--white);
+padding:12px 35px;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+display:inline-block;
+transition:0.3s;
+border:none;
+cursor:pointer;
+margin-top:15px;
+}
+
+.btn:hover{
+background:var(--primary-color);
+transform:scale(1.05);
+}
+
+/* 8. ألوان الحزم */
+
+.premium-color{
+border-top:8px solid var(--accent-gold);
+}
+
+.classic-color{
+border-top:8px solid var(--accent-blue);
+}
+
+.day-color{
+border-top:8px solid var(--accent-orange);
+}
+
+/* 9. الفوتر */
+
+footer{
+background:var(--primary-color);
+color:var(--white);
+text-align:center;
+padding:25px 0;
+width:100%;
+margin-top:auto;
+}
+
+/* 10. الموبايل */
+
+@media (max-width:768px){
+
+.nav-links{
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.stat-item h3{
+font-size:1.8rem;
+}
+
+}
+
+/* 11. أدوات الوصول */
+
+.accessibility-tools{
+display:flex;
+gap:8px;
+margin-top:5px;
+}
+
+.accessibility-tools button{
+border:none;
+padding:6px 10px;
+border-radius:6px;
+background:var(--accent-gold);
+color:white;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+.accessibility-tools button:hover{
+background:var(--accent-blue);
+transform:scale(1.05);
+}
+
+/* Dark Mode */
+
+.dark-mode{
+background:#121212;
+color:white;
+}
+
+.dark-mode header{
+background:#000;
+}
+
+.dark-mode footer{
+background:#000;
+}
+
+.dark-mode .service-card,
+.dark-mode .package-card,
+.dark-mode .contact-form{
+background:#1e1e1e;
+color:white;
+border:1px solid #333;
+}

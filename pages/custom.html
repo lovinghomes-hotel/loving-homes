@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحزم المخصصة - Loving Homes</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Loving Homes 🐾</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الفندق</a></li>
+                <li><a href="services.html">المرافق</a></li>
+                <li><a href="packages.html">الحزم والأسعار</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="custom-hero">
+            <h1 class="main-title">حزم مخصصة لاحتياجات فريدة</h1>
+            <p style="text-align: center;">لأننا نعلم أن كل كلب حالة خاصة، نحن هنا لنصمم له التجربة التي تناسبه تماماً.</p>
+        </section>
+
+        <div class="custom-content flex-row" style="display: flex; gap: 40px; align-items: flex-start; margin-top: 40px;">
+            <div class="text-side" style="flex: 1.5;">
+                <h2>متى تحتاج لحزمة مخصصة؟</h2>
+                <div class="custom-card" style="background: #fdf2e9; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                    <h4>🏠 الإقامات الطويلة</h4>
+                    <p>إذا كنت تخطط للسفر لفترة طويلة، نقدم خصومات وخدمات رعاية مستمرة تضمن راحة كلبك.</p>
+                </div>
+                <div class="custom-card" style="background: #fdf2e9; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                    <h4>💊 متطلبات طبية خاصة</h4>
+                    <p>للكلاب التي تحتاج أدوية محددة أو نظاماً غذائياً دقيقاً أو رعاية بيطرية مكثفة.</p>
+                </div>
+                <div class="custom-card" style="background: #fdf2e9; padding: 20px; border-radius: 10px; margin-bottom: 15px;">
+                    <h4>🐕 كلاب ذات طباع خاصة</h4>
+                    <p>سواء كان كلبك يحتاج للانعزال أو يحتاج لتدريبات سلوكية إضافية خلال إقامته.</p>
+                </div>
+                <p class="call-action" style="margin: 20px 0; color: #e67e22;"><strong>يجب على العملاء الاتصال بنا مباشرة لترتيب هذه الحزم.</strong></p>
+                <a href="contact.html" class="btn">تواصل معنا الآن</a>
+            </div>
+            
+            <div class="image-side" style="flex: 1;">
+                <img src="../images/img-special-care.webp" alt="رعاية مخصصة للكلاب" class="large-img" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 50px;">
+        <p>جميع الحقوق محفوظة © 2026 - Loving Homes Hong Kong</p>
+    </footer>
+
+
+    <!-- أزرار التكبير والتصغير وتغيير الثيم -->
+    <div style="position: fixed; bottom: 20px; left: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 999;">
+        <button onclick="zoomIn()" style="padding:10px;font-size:18px;">+</button>
+        <button onclick="zoomOut()" style="padding:10px;font-size:18px;">-</button>
+        <button onclick="toggleTheme()" style="padding:10px;font-size:18px;">🌙</button>
+    </div>
+
+    <script>
+
+        let zoomLevel = 1;
+
+        function zoomIn() {
+            zoomLevel += 0.1;
+            document.body.style.zoom = zoomLevel;
+        }
+
+        function zoomOut() {
+            zoomLevel -= 0.1;
+            document.body.style.zoom = zoomLevel;
+        }
+
+        function toggleTheme() {
+
+            if (document.body.classList.contains("dark-mode")) {
+                document.body.classList.remove("dark-mode");
+                document.body.style.background = "white";
+                document.body.style.color = "black";
+            } else {
+                document.body.classList.add("dark-mode");
+                document.body.style.background = "#1e1e1e";
+                document.body.style.color = "white";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحزم والأسعار - Loving Homes</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Loving Homes 🐾</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الفندق</a></li>
+                <li><a href="services.html">المرافق</a></li>
+                <li><a href="packages.html" class="active">الحزم والأسعار</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">اختر الحزمة المناسبة لكلبك</h1>
+        <p style="text-align: center; margin-bottom: 50px;">نقدم خيارات متنوعة تناسب جميع الاحتياجات والميزانيات في قلب هونغ كونغ.</p>
+
+        <div class="grid-container">
+            <div class="package-card premium-color" style="border-top: 5px solid #f1c40f;">
+                <h2>الحزمة المميزة</h2>
+                <h3 style="color: #d4af37; margin: 15px 0;">500 HKD / ليلة</h3>
+                <p>رعاية ملكية تشمل جميع المرافق والخدمات الفاخرة والجناح الخاص.</p>
+                <a href="premium.html" class="btn">عرض التفاصيل</a>
+            </div>
+
+            <div class="package-card classic-color" style="border-top: 5px solid #3498db;">
+                <h2>الحزمة الكلاسيكية</h2>
+                <h3 style="color: #2980b9; margin: 15px 0;">300 HKD / ليلة</h3>
+                <p>توازن مثالي بين العناية والمرح اليومي مع أصدقاء جدد.</p>
+                <a href="classic.html" class="btn">عرض التفاصيل</a>
+            </div>
+
+            <div class="package-card day-color" style="border-top: 5px solid #2ecc71;">
+                <h2>حزمة اليوم</h2>
+                <h3 style="color: #27ae60; margin: 15px 0;">150 HKD / يوم</h3>
+                <p>خيار مثالي للرعاية النهارية، النشاط البدني، والوجبات الصحية.</p>
+                <a href="day-care.html" class="btn">عرض التفاصيل</a>
+            </div>
+
+            <div class="package-card" style="border-top: 5px solid #95a5a6;">
+                <h2>حزم مخصصة</h2>
+                <h3 style="color: #7f8c8d; margin: 15px 0;">حسب الطلب</h3>
+                <p>للحالات التي تتطلب إقامات طويلة أو عناية طبية خاصة جداً.</p>
+                <a href="custom.html" class="btn" style="background: #95a5a6; color: white;">اكتشف المزيد</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - Loving Homes Hong Kong</p>
+    </footer>
+
+
+    <!-- أزرار التكبير والتصغير وتغيير الثيم -->
+    <div style="position: fixed; bottom: 20px; left: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 999;">
+        <button onclick="zoomIn()" style="padding:10px;font-size:18px;">+</button>
+        <button onclick="zoomOut()" style="padding:10px;font-size:18px;">-</button>
+        <button onclick="toggleTheme()" style="padding:10px;font-size:18px;">🌙</button>
+    </div>
+
+    <script>
+
+        let zoomLevel = 1;
+
+        function zoomIn() {
+            zoomLevel += 0.1;
+            document.body.style.zoom = zoomLevel;
+        }
+
+        function zoomOut() {
+            zoomLevel -= 0.1;
+            document.body.style.zoom = zoomLevel;
+        }
+
+        function toggleTheme() {
+
+            if (document.body.classList.contains("dark-mode")) {
+                document.body.classList.remove("dark-mode");
+                document.body.style.background = "white";
+                document.body.style.color = "black";
+            } else {
+                document.body.classList.add("dark-mode");
+                document.body.style.background = "#1e1e1e";
+                document.body.style.color = "white";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرافقنا - Loving Homes</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Loving Homes 🐾</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="about.html">عن الفندق</a></li>
+                <li><a href="services.html" class="active">المرافق</a></li>
+                <li><a href="packages.html">الحزم والأسعار</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="main-title">مرافقنا الفاخرة في هونج كونج</h1>
+        <p style="text-align: center; margin-bottom: 40px;">نحن نوفر بيئة تحاكي المنزل لضمان راحة كلبكم وسعادته.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="../images/img-indoor-forest.jpg" alt="غابة داخلية" class="service-img">
+                <h3>الغابة الداخلية</h3>
+                <p>مساحة خضراء واسعة وآمنة للعب والاستكشاف في بيئة طبيعية محفزة.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="../images/img-heating-cooling.avif" alt="تدفئة وتكييف" class="service-img">
+                <h3>تحكم حراري كامل</h3>
+                <p>أنظمة تدفئة وتكييف متطورة لضمان درجة حرارة مثالية طوال العام.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="../images/img-tv-screens.jpg" alt="شاشات تلفاز" class="service-img">
+                <h3>ترفيه منزلي</h3>
+                <p>شاشات تلفاز تعرض برامج مخصصة لتهدئة الكلاب وتقليل التوتر.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="../images/img-cctv.jpg" alt="كاميرات مراقبة" class="service-img">
+                <h3>بث حي 24/7</h3>
+                <p>كاميرات ويب تتيح لكم مشاهدة كلابكم والاطمئنان عليها من أي مكان.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - Loving Homes Hong Kong</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+
+    <!-- أزرار التكبير والتصغير وتغيير الثيم -->
+    <div style="position: fixed; bottom: 20px; left: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 999;">
+        <button onclick="zoomIn()" style="padding:10px;font-size:18px;">+</button>
+        <button onclick="zoomOut()" style="padding:10px;font-size:18px;">-</button>
+        <button onclick="toggleTheme()" style="padding:10px;font-size:18px;">🌙</button>
+    </div>
+
+    <script>
+
+        let zoomLevel = 1;
+
+        function zoomIn() {
+            zoomLevel += 0.1;
+            document.body.style.zoom = zoomLevel;
+        }
+
+        function zoomOut() {
+            zoomLevel -= 0.1;
+            document.body.style.zoom = zoomLevel;
+        }
+
+        function toggleTheme() {
+
+            if (document.body.classList.contains("dark-mode")) {
+                document.body.classList.remove("dark-mode");
+                document.body.style.background = "white";
+                document.body.style.color = "black";
+            } else {
+                document.body.classList.add("dark-mode");
+                document.body.style.background = "#1e1e1e";
+                document.body.style.color = "white";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
